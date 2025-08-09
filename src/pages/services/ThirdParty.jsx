@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../../assets/heroimg.png";
+import heroImage from "../../assets/4.png";
 import backdrop from "../../assets/backdrop.png";
 import teamImage from "../../assets/robot.png";
 
@@ -40,35 +40,40 @@ export default function ThirdPartyPage() {
   return (
     <div className="font-sans text-black bg-white ">
       
-      {/* Hero Section */}
-      <section className="flex justify-between items-center px-20 py-50">
-        <div>
-          <h1 className="text-3xl font-bold mb-2">Third Party AI Tools</h1>
-          <p className="text-sm text-gray-600">“Harness the Power of Third-Party AI Tools”</p>
-        </div>
+          {/* Hero Section */}
+        <section className="bg-gray-50 overflow-hidden flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 lg:px-10 pt-40 pb-40 sm:pt-32 sm:pb-32 lg:py-16 gap-8 lg:pt-40 lg:pb-40 ">
         
+                {/* TEKS (dari kode kedua) */}
+                <div className="w-full lg:w-1/2 text-center lg:text-left mx-20">
+                  <h1 className="text-5xl font-bold mb-2">Third Party AI Tools</h1>
+                  <p className="text-sm sm:text-base text-gray-600">“Harness the Power of Third-Party AI Tools”</p>
+                </div>
+        
+                {/* GAMBAR (dari kode pertama) */}
+                <div className="w-full lg:w-1/2 relative order-1 lg:order-2 flex justify-center lg:justify-end">
+                  
+                  {/* Backdrop Image */}
+                  <div className="absolute -top-25 right-0 hidden md:block z-0">
+                    <img
+                      src={backdrop}
+                      alt="Decorative backdrop"
+                      className="w-64 lg:w-100 rounded-lg"
+                    />
+                  </div>
+        
+                  {/* Main Hero Image */}
+                  <div className="relative z-10 transform hover:-translate-y-2 transition duration-300 lg:-translate-x-24">
+                    <img
+                      src={heroImage}
+                      alt="Our team working"
+                      className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto rounded-lg shadow-xl  -ml-4 sm:ml-0"
+                    />
+                  </div>
+                </div>
+        
+              </section>
 
-        {/* Stacked Images - Move to top on mobile */}
-          <div className="md:w-1/2 relative order-1 md:order-2 w-full">
-            {/* Backdrop Image - Bottom layer */}
-            <div className="absolute -top-20 -right-60 w-full h-full">
-              <img 
-                src={backdrop} 
-                alt="Decorative backdrop"
-                className="w-90 rounded-lg max-w-xs sm:max-w-sm"
-              />
-            </div>
 
-            {/* Main Hero Image - Top layer */}
-            <div className="relative z-7 transform hover:-translate-y-2 transition duration-300 left-5">
-              <img 
-                src={heroImage} 
-                alt="Our team working"
-                className="w-90 max-w-xs sm:max-w-sm md:max-w-full h-auto rounded-lg shadow-xl border-4 border-white mx-auto"
-              />
-            </div>
-          </div>
-      </section>
 
       {/* Company Intro */}
       <section className="bg-[#0B2B44] text-white py-40 px-6 md:px-20 relative overflow-hidden">
@@ -151,11 +156,11 @@ export default function ThirdPartyPage() {
         <div className="max-w-7xl mx-auto bg-white rounded-3xl shadow-md flex flex-col md:flex-row items-center overflow-hidden">
           
           {/* Left - Image */}
-          <div className="md:w-1/4 w-full">
+          <div className="md:w-4/7 w-full">
             <img
               src="/src/assets/cta4.png"
               alt="IT Support"
-              className="w-full h-full object-cover rounded-l-2xl"
+              className="w-full h-full object-cover"
             />
           </div>
 

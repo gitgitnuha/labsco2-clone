@@ -95,45 +95,51 @@ const HeroSection = () => {
   return (
     <>
       {/* Hero Content Section */}
-      <section id="home" className="bg-gray-50 py-12 px-4 md:px-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 md:py-13">
+      <section
+        id="home"
+        className="bg-gray-50 overflow-hidden py-12 px-4 sm:px-8 lg:px-20"
+      >
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12 lg:py-16">
           
-          {/* Stacked Images - Move to top on mobile */}
-          <div className="md:w-1/2 relative order-1 md:order-2 w-full">
-            {/* Backdrop Image - Bottom layer */}
-            <div className="absolute -top-20 -right-60 w-full h-full">
-              <img 
-                src={backdrop} 
+          {/* Gambar */}
+          <div className="w-full lg:w-1/2 relative order-1 lg:order-2 flex justify-center lg:justify-end">
+            
+            {/* Backdrop Image - Hanya tampil di md ke atas */}
+            <div className="absolute -top-12 right-0 hidden md:block">
+              <img
+                src={backdrop}
                 alt="Decorative backdrop"
-                className="w-90 rounded-lg max-w-xs sm:max-w-sm"
+                className="w-64 lg:w-80 rounded-lg opacity-80"
               />
             </div>
 
-            {/* Main Hero Image - Top layer */}
-            <div className="relative z-7 transform hover:-translate-y-2 transition duration-300 left-5">
-              <img 
-                src={heroImage} 
+            {/* Main Hero Image */}
+            <div className="relative z-10 transform hover:-translate-y-2 transition duration-300 lg:-translate-x-24">
+              <img
+                src={heroImage}
                 alt="Our team working"
-                className="w-90 max-w-xs sm:max-w-sm md:max-w-full h-auto rounded-lg shadow-xl border-4 border-white mx-auto"
+                className="w-64 sm:w-72 md:w-80 lg:w-96 h-auto rounded-lg shadow-xl border-4 border-white -ml-4 sm:ml-0"
               />
             </div>
           </div>
 
-          {/* Text Content - Show below on mobile */}
-          <div className="md:w-1/2 text-left order-2 md:order-1 w-full">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          {/* Teks */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
               Where Code Meets <span className="text-blue-600">Innovation</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
               Harnessing the power of our Coding Collective to build solutions for your business needs.
             </p>
-            <div className="flex justify-start">
+            <div className="flex justify-center lg:justify-start">
               <ButtonWA text="Get Started Today" />
             </div>
           </div>
 
         </div>
       </section>
+
+
 
 
       {/* Services Section - Separated */}
